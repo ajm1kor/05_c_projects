@@ -5,7 +5,7 @@ DEFINES=
 OPTIONS=-O2 -pedantic
 AR=ar
 AR_OPTIONS=rcvs
-ARLIB=libdriver.a
+ARLIB=libdriver.a 
 ARCHIVE=$(RDIR)/libdriver/$(ARLIB)
 COMPILE=$(CC) $(DEFINES) $(OPTIONS) -std=c99
 SOURCES=add.c \
@@ -21,4 +21,5 @@ $(ARCHIVE): $(OBJECTS)
 	$(COMPILE) $(INCLUDE) -c -o $@ $<
 
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(ARCHIVE)
+
