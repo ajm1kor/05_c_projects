@@ -1,0 +1,4 @@
+all: 
+	gcc -o main add.c sub.c main.c
+clean:
+	del main.exe

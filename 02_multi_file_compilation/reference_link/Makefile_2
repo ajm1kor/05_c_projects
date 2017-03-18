@@ -1,0 +1,10 @@
+CC = gcc
+CFLAGS = -Wall
+DEPS = myinclude.h
+OBJ = main.o add.o sub.o
+
+%.o: %.c $(DEPS)
+        $(CC) $(CFLAGS) -c -o $@ $<
+
+main: $(OBJ)
+        gcc $(CFLAGS) -o $@ $^
